@@ -37,7 +37,8 @@ const Listing: React.FC<ListingProps> = ({ items = [] }) => {
     };
 
     const truncateTitle = (title: string) => {
-        return title;
+        if (!title) return ""; // Защита от undefined/null/пустой строки
+        return title.length > 50 ? title.slice(0, 50) + "…" : title;
     };
 
     return (
