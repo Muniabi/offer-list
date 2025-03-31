@@ -16,12 +16,7 @@ interface ListingItem {
 function App() {
     console.log("data", data);
 
-    return (
-        <>
-            <h1>Etsy Listings</h1>
-            <Listing items={data as ListingItem[]} />
-        </>
-    );
+    return <Listing items={data as ListingItem[]} />;
 }
 
 export default App;

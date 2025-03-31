@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 
 export interface ListingItem {
     listing_id: number;
@@ -36,7 +37,7 @@ const Listing: React.FC<ListingProps> = ({ items = [] }) => {
     };
 
     const truncateTitle = (title: string) => {
-        return title.length > 50 ? `${title.slice(0, 47)}…` : title;
+        return title;
     };
 
     return (
